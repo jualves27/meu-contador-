@@ -1,0 +1,8 @@
+{
+    "name": "meu-contador",
+    "version": "1.0.0",
+    "description": "Aplicação simples de contador com testes automatizados",
+    "scripts": {
+        "test": "node --test"
+    }
+}

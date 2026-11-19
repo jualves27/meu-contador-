@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #080d1a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fundo tecnológico */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(100, 200, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 200, 255, 0.035) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #4938ff;
+    filter: blur(150px);
+    opacity: 0.25;
+    top: 10%;
+    left: 10%;
+    pointer-events: none;
+}
+
+/* Cartão principal */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 40px;
+    text-align: center;
+    border-radius: 25px;
+
+    background: rgba(19, 29, 52, 0.85);
+    border: 1px solid rgba(101, 223, 255, 0.2);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(70, 130, 255, 0.08);
+}
+
+/* Título */
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+p {
+    color: #91a2c1;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Número do contador */
+h2 {
+    font-size: 90px;
+    font-weight: 800;
+    color: #6ee7ff;
+    margin: 25px 0;
+    font-variant-numeric: tabular-nums;
+
+    text-shadow:
+        0 0 15px rgba(110, 231, 255, 0.6),
+        0 0 35px rgba(110, 231, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+/* Área dos botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Botões */
+button {
+    padding: 14px 22px;
+    border: 1px solid rgba(110, 231, 255, 0.2);
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #2379c9, #5865f2);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 20px rgba(47, 154, 255, 0.15);
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(65, 210, 255, 0.3);
+    filter: brightness(1.15);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 70px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
